@@ -2,7 +2,6 @@ from allure import title
 from data import urls
 from pages.login_page import LoginPage
 from pages.main_page import MainPage
-from pages.account_page import AccountPage
 
 
 class TestBaseFunctionality:

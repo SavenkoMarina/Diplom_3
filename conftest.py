@@ -3,10 +3,17 @@ from selenium import webdriver
 from api import API
 from helpers import generate_random_string
 
+def get_driver(browser):
+    if browser == "firefox":
+        return webdriver.Firefox()
+    elif browser == "chrome":
+        return webdriver.Chrome()
+    raise ValueError("this browser is not supported")
 
-@pytest.fixture
-def driver():
-    driver = webdriver.Chrome()
+
+@pytest.fixture(params=("chrome", "firefox"))
+def driver(request):
+    driver = get_driver(request.param)
     yield driver
     driver.quit()
 
