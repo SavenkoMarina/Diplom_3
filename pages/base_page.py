@@ -1,4 +1,5 @@
 from selenium.webdriver.support import expected_conditions
+from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 
 TIMEOUT = 10
@@ -14,6 +15,9 @@ class BasePage:
         WebDriverWait(self.driver,TIMEOUT).until(
             expected_conditions.visibility_of_element_located(locator)
         )
+
+    def drag_and_drop(self, drag, drop):
+        ActionChains(self.driver).drag_and_drop(drag, drop).perform()
 
     def wait_for_clickable_element(self, locator):
         WebDriverWait(self.driver, TIMEOUT).until(

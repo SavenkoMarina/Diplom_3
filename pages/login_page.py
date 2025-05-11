@@ -26,3 +26,8 @@ class LoginPage(BasePage):
         self.click_element(LoginPageLocators.ENTER_BTN)
         self.wait_for_clickable_element(MainPageLocators.FIRST_BUN_LINK)
 
+    @step("Перейти в конструктор")
+    def click_to_constructor(self):
+        self.click_element(MainPageLocators.CONSTRUCTOR_LINK)
+        self.wait_for_clickable_element(MainPageLocators.ROOT_FIELD)
+

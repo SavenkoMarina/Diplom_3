@@ -1,13 +1,8 @@
-import time
 from allure import title
 from data import urls
-from locators.reset_page_locators import ResetPageLocators
 from pages.login_page import LoginPage
 from pages.main_page import MainPage
 from pages.account_page import AccountPage
-from pages.recover_page import RecoverPage
-from pages.reset_page import ResetPage
-from helpers import generate_email
 
 
 class TestAccountPage:
