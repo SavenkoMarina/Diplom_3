@@ -63,7 +63,7 @@ class TestFeedPage:
         _, new_daily = page.get_orders_count()
         assert old_daily < new_daily
 
-    @title("Проверка номера оформленного заказа в разделе В работе.")
+    @title("Проверка номера оформленного заказа в разделе В работе")
     def test_order_in_progress(self, driver, user):
         login_page = LoginPage(driver)
         login_page.login(user["email"], user["password"])

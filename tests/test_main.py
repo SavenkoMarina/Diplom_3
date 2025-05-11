@@ -4,9 +4,9 @@ from pages.login_page import LoginPage
 from pages.main_page import MainPage
 
 
-class TestBaseFunctionality:
-    @title("Переход в личный кабинет")
-    def test_account_link(self, driver, user):
+class TestMainFunctionality:
+    @title("Переход по клику на 'Конструктор'")
+    def test_constructor_link(self, driver, user):
         login_page = LoginPage(driver)
         login_page.click_to_constructor()
 
